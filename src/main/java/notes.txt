@@ -1,0 +1,44 @@
+A Program to demonstrate how to configure the multiple interceptors to single URL:
+Programs:
+* AppConfig.java
+* AppInit.java
+* ActionHandlerController.java
+* ActionHandlerInterceptor1.java
+* ActionHandlerInterceptor2.java
+* ActionHandlerInterceptor3.java
+Notes:
+* To configure multiple Interceptors, the InterceptorRegistry class given one method.
+* public InterceptorRegistration addInterceptor(HandlerInterceptor interceptor) method to add custom interceptor.
+* If we not configure any order then interceptors are executed based on their adding order.
+Output:
+console output for this url: http://localhost:8080/SpringInterceptorApplication5/action/actionHandler1
+From preHandle method in ActionHandlerInterceptor1 class
+From preHandle method in ActionHandlerInterceptor2 class
+From preHandle method in ActionHandlerInterceptor3 class
+From actionHandler1 method in ActionHandlerController class
+From postHandle method in ActionHandlerInterceptor3 class
+From postHandle method in ActionHandlerInterceptor2 class
+From postHandle method in ActionHandlerInterceptor1 class
+
+console output for this url: http://localhost:8080/SpringInterceptorApplication5/action/actionHandler2
+From preHandle method in ActionHandlerInterceptor1 class
+From preHandle method in ActionHandlerInterceptor2 class
+From actionHandler2 method in ActionHandlerController class
+From postHandle method in ActionHandlerInterceptor2 class
+From postHandle method in ActionHandlerInterceptor1 class
+
+console output for this url: http://localhost:8080/SpringInterceptorApplication5/action/actionHandler3
+From preHandle method in ActionHandlerInterceptor1 class
+From preHandle method in ActionHandlerInterceptor2 class
+From actionHandler3 method in ActionHandlerController class
+From postHandle method in ActionHandlerInterceptor2 class
+From postHandle method in ActionHandlerInterceptor1 class
+
+console output for this url: http://localhost:8080/SpringInterceptorApplication5/action/actionHandler4
+From preHandle method in ActionHandlerInterceptor1 class
+From preHandle method in ActionHandlerInterceptor2 class
+From preHandle method in ActionHandlerInterceptor3 class
+From actionHandler4 method in ActionHandlerController class
+From postHandle method in ActionHandlerInterceptor3 class
+From postHandle method in ActionHandlerInterceptor2 class
+From postHandle method in ActionHandlerInterceptor1 class
